@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:social_media_app/core/utils/assets_data.dart';
 
 class CustomSvgSocializeWidget extends StatelessWidget {
   const CustomSvgSocializeWidget({super.key});
@@ -7,7 +8,7 @@ class CustomSvgSocializeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      'assets/images/socialized.svg',
+      AssetsData.socializedSvg,
       width: MediaQuery.of(context).size.width*.9,
       height: MediaQuery.of(context).size.width*.25,
     );

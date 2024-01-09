@@ -1,9 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:social_media_app/core/utils/assets_data.dart';
+import 'package:social_media_app/presentation/screens/login_screen.dart';
+import 'package:social_media_app/presentation/widget/widget_components/custom_botton_register.dart';
+import 'package:social_media_app/presentation/widget/widget_components/custom_svg_socialize_widget.dart';
 
-import '../../core/components/custom_botton_register.dart';
-import '../../core/components/custom_svg_socialize_widget.dart';
 
 class SplashScreenBody extends StatelessWidget {
   const SplashScreenBody({super.key});
@@ -18,7 +20,7 @@ class SplashScreenBody extends StatelessWidget {
         SizedBox(
             width:MediaQuery.of(context).size.width*.7,
             height: MediaQuery.of(context).size.height*.4,
-            child: Lottie.asset('assets/images/splash_animation.json')),
+            child: Lottie.asset(AssetsData.splashAnimation)),
         const SizedBox(height: 20,),
         const CustomSvgSocializeWidget(),
         const SizedBox(height: 60,),
@@ -27,7 +29,10 @@ class SplashScreenBody extends StatelessWidget {
           child: CustomButtonRegisterWidget(
             onPressed: ()
             {
-
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context)=>const LoginScreen()),
+              );
             },
             color: Colors.white,
             text:'Get started ... ',),
