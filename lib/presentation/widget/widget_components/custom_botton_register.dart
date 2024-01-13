@@ -5,17 +5,19 @@ class CustomButtonRegisterWidget extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.color,
-    required this.text
+    required this.text,
+    this.width
   });
 
   GestureTapCallback onPressed;
   Color color;
   String text;
+  double? width =double.infinity;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
+      width: width,
       child: MaterialButton(
         color: color,
         onPressed: onPressed,

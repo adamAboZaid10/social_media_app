@@ -1,10 +1,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:social_media_app/core/styles/color_theme.dart';
+import 'package:social_media_app/presentation/screens/layout_screen.dart';
 import 'package:social_media_app/presentation/screens/register_screens/register_screen.dart';
 import 'package:social_media_app/presentation/widget/widget_components/custom_botton_register.dart';
 import 'package:social_media_app/presentation/widget/widget_components/custom_svg_socialize_widget.dart';
 import 'package:social_media_app/presentation/widget/widget_components/default_text_form_field.dart';
+
 
 class LoginScreenBody extends StatelessWidget {
    LoginScreenBody({super.key});
@@ -59,11 +61,14 @@ class LoginScreenBody extends StatelessWidget {
                 ),
                 const  SizedBox(height: 30,),
                 CustomButtonRegisterWidget(
+                    width: double.infinity,
                     onPressed: ()
                     {
                       if(formKey.currentState!.validate())
                       {
-
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context)=>const LayoutScreen()));
                       }
                     },
                     color: defaultGoldColor,
@@ -77,6 +82,7 @@ class LoginScreenBody extends StatelessWidget {
                     )),
                 const  SizedBox(height: 40,),
                 CustomButtonRegisterWidget(
+                    width: double.infinity,
                     onPressed: ()
                     {
                       Navigator.push(

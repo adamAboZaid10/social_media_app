@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:social_media_app/presentation/controller/register_cubit.dart';
+import 'package:social_media_app/presentation/controller/register_cubit/register_cubit.dart';
 import 'package:social_media_app/presentation/screens/register_screens/registe_confirm_password_screen.dart';
 import 'package:social_media_app/presentation/widget/widget_components/custom_botton_register.dart';
 import 'package:social_media_app/presentation/widget/widget_components/custom_svg_socialize_widget.dart';
@@ -69,6 +69,7 @@ class RegisterPasswordScreenBody extends StatelessWidget {
               ),
               const SizedBox(height: 16,),
               CustomButtonRegisterWidget(
+                  width: double.infinity,
                   onPressed: ()
                   {
                     Navigator.push(

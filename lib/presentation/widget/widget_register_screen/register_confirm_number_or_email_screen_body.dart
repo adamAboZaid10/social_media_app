@@ -5,6 +5,7 @@ import 'package:social_media_app/presentation/widget/widget_components/custom_sv
 import 'package:social_media_app/presentation/widget/widget_components/default_text_form_field.dart';
 
 import '../../../core/styles/color_theme.dart';
+import '../../screens/register_screens/add_register_profile_picture.dart';
 
 class RegisterConfirmNumberOrEmailScreenBody extends StatelessWidget {
    RegisterConfirmNumberOrEmailScreenBody({super.key});
@@ -54,24 +55,23 @@ var confirmEmailController = TextEditingController();
               ),
               const SizedBox(height: 16,),
               CustomButtonRegisterWidget(
+                  width: double.infinity,
                   onPressed: ()
                   {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context)=>const RegisterConfirmNumberOrEmailScreen()),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context)=>const AddRegisterProfilePicture()),
+                    );
                   },
                   color: defaultGoldColor,
                   text: "Next"
               ),
               const SizedBox(height: 16,),
               CustomButtonRegisterWidget(
+                  width: double.infinity,
                   onPressed: ()
                   {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context)=>const RegisterConfirmNumberOrEmailScreen()),
-                    // );
+
                   },
                   color: Colors.white,
                   text: "I didn’t get the code"

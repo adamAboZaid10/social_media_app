@@ -56,6 +56,7 @@ class RegisterScreenBody extends StatelessWidget {
             ),
             const SizedBox(height: 16,),
             CustomButtonRegisterWidget(
+                width: double.infinity,
                 onPressed: ()
                 {
                   Navigator.push(

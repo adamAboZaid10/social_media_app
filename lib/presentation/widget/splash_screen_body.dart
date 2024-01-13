@@ -27,6 +27,7 @@ class SplashScreenBody extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(20.0),
           child: CustomButtonRegisterWidget(
+            width: double.infinity,
             onPressed: ()
             {
               Navigator.push(

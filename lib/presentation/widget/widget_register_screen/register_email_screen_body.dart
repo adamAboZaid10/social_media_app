@@ -65,6 +65,7 @@ var emailController = TextEditingController();
                 ),
               ),
               CustomButtonRegisterWidget(
+                  width: double.infinity,
                   onPressed: ()
                   {
                     Navigator.push(

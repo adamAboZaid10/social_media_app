@@ -65,6 +65,7 @@ class RegisterMobileNumberScreenBody extends StatelessWidget {
                 ),
               ),
               CustomButtonRegisterWidget(
+                  width: double.infinity,
                   onPressed: ()
                   {
                     Navigator.push(

@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media_app/core/styles/color_theme.dart';
-import 'package:social_media_app/presentation/controller/register_cubit.dart';
+import 'package:social_media_app/presentation/controller/register_cubit/register_cubit.dart';
 import 'package:social_media_app/presentation/widget/show_date_picker_custom.dart';
 import 'package:social_media_app/presentation/widget/widget_components/custom_botton_register.dart';
 import 'package:social_media_app/presentation/widget/widget_components/custom_svg_socialize_widget.dart';
@@ -70,6 +70,7 @@ var birthdayController = TextEditingController();
               ),
               const SizedBox(height: 16,),
               CustomButtonRegisterWidget(
+                  width: double.infinity,
                   onPressed: ()
                   {
 

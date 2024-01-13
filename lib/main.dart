@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:social_media_app/presentation/controller/register_cubit.dart';
+import 'package:social_media_app/presentation/controller/bottom_nav_bar_bloc/bottom_nav_bar_bloc.dart';
+import 'package:social_media_app/presentation/controller/get_image_bloc/get_image_bloc.dart';
+import 'package:social_media_app/presentation/controller/register_cubit/register_cubit.dart';
 import 'package:social_media_app/presentation/screens/splash_screen.dart';
 
 import 'core/styles/theme_styles.dart';
@@ -20,6 +22,8 @@ class MyApp extends StatelessWidget {
       providers:
       [
         BlocProvider(create: (context)=>RegisterCubit()),
+        BlocProvider(create: (context)=>GetImageBloc()),
+        BlocProvider(create: (context)=>BottomNavBarBloc()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

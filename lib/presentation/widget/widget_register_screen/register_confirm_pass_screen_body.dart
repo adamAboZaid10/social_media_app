@@ -6,8 +6,7 @@ import 'package:social_media_app/presentation/widget/widget_components/custom_sv
 import 'package:social_media_app/presentation/widget/widget_components/default_text_form_field.dart';
 
 import '../../../core/styles/color_theme.dart';
-import '../../controller/register_cubit.dart';
-import '../../screens/register_screens/registe_confirm_password_screen.dart';
+import '../../controller/register_cubit/register_cubit.dart';
 
 class RegisterConfirmPassScreenBody extends StatelessWidget {
    RegisterConfirmPassScreenBody({super.key});
@@ -68,6 +67,7 @@ class RegisterConfirmPassScreenBody extends StatelessWidget {
               ),
               const SizedBox(height: 16,),
               CustomButtonRegisterWidget(
+                  width: double.infinity,
                   onPressed: ()
                   {
                     Navigator.push(
