@@ -16,16 +16,16 @@ class SplashScreenBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children:
       [
-        const SizedBox(height: 50,),
+         SizedBox(height: MediaQuery.of(context).size.height*.1,),
         SizedBox(
             width:MediaQuery.of(context).size.width*.7,
             height: MediaQuery.of(context).size.height*.4,
             child: Lottie.asset(AssetsData.splashAnimation)),
-        const SizedBox(height: 20,),
+         SizedBox(height: MediaQuery.of(context).size.height*.04,),
         const CustomSvgSocializeWidget(),
-        const SizedBox(height: 60,),
+         SizedBox(height: MediaQuery.of(context).size.height*.08,),
         Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*.04),
           child: CustomButtonRegisterWidget(
             width: double.infinity,
             onPressed: ()

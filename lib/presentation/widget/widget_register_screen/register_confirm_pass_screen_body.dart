@@ -14,15 +14,15 @@ class RegisterConfirmPassScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*.03),
       child:  SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:[
-              const SizedBox(height: 30,),
+              SizedBox(height: MediaQuery.of(context).size.height*.05,),
               const CustomSvgSocializeWidget(),
-              const SizedBox(height: 20,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
               const Text(
                 'Create a password',
                 style: TextStyle(
@@ -39,7 +39,7 @@ class RegisterConfirmPassScreenBody extends StatelessWidget {
                     fontWeight: FontWeight.w400
                 ),
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
               BlocBuilder<RegisterCubit,RegisterState>(
                 builder: (context,state)
                 {
@@ -65,7 +65,7 @@ class RegisterConfirmPassScreenBody extends StatelessWidget {
                   );
                 },
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
               CustomButtonRegisterWidget(
                   width: double.infinity,
                   onPressed: ()
@@ -78,7 +78,7 @@ class RegisterConfirmPassScreenBody extends StatelessWidget {
                   color:defaultGoldColor,
                   text: "Next"
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
 
             ]
 

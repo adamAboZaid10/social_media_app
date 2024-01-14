@@ -17,12 +17,12 @@ class AddRegisterProfilePictureBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.height*.02),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:
           [
-            const SizedBox(height: 32,),
+            SizedBox(height: MediaQuery.of(context).size.height*.05,),
             Text(
               'Add a profile picture',
               style: Theme
@@ -30,7 +30,7 @@ class AddRegisterProfilePictureBody extends StatelessWidget {
                   .textTheme
                   .bodyText1!,
             ),
-            const SizedBox(height: 16,),
+            SizedBox(height: MediaQuery.of(context).size.height*.03,),
             Text(
               'Add a profile picture so your friends know it’s you. Everyone will be able to see your picture.',
               style: Theme
@@ -43,7 +43,7 @@ class AddRegisterProfilePictureBody extends StatelessWidget {
 
               ),
             ),
-            const SizedBox(height: 32,),
+            SizedBox(height: MediaQuery.of(context).size.height*.05,),
 
             BlocBuilder<GetImageBloc, GetImageState>(
                 builder: (context, state) {
@@ -100,7 +100,7 @@ class AddRegisterProfilePictureBody extends StatelessWidget {
               color: Colors.white,
               text: 'Skip',
             ),
-            const SizedBox(height: 16,),
+            SizedBox(height: MediaQuery.of(context).size.height*.03,),
           ],
         ),
       ),

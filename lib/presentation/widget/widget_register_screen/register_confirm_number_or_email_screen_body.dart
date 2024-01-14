@@ -13,15 +13,15 @@ var confirmEmailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.height*.02),
       child:  SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:[
-              const SizedBox(height: 30,),
+              SizedBox(height: MediaQuery.of(context).size.height*.05,),
               const CustomSvgSocializeWidget(),
-              const SizedBox(height: 20,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
               const Text(
                 'Enter the confirmation code',
                 style: TextStyle(
@@ -38,7 +38,7 @@ var confirmEmailController = TextEditingController();
                     fontWeight: FontWeight.w400
                 ),
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
               DefaultFormField(
                 controller: confirmEmailController,
                 type: TextInputType.number,
@@ -53,7 +53,7 @@ var confirmEmailController = TextEditingController();
                 hintText: 'confirm code',
                 obscure:false,
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
               CustomButtonRegisterWidget(
                   width: double.infinity,
                   onPressed: ()
@@ -66,7 +66,7 @@ var confirmEmailController = TextEditingController();
                   color: defaultGoldColor,
                   text: "Next"
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
               CustomButtonRegisterWidget(
                   width: double.infinity,
                   onPressed: ()
@@ -76,7 +76,7 @@ var confirmEmailController = TextEditingController();
                   color: Colors.white,
                   text: "I didn’t get the code"
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
 
             ]
 

@@ -5,17 +5,17 @@ import 'package:social_media_app/presentation/controller/bottom_nav_bar_bloc/bot
 
 import '../../core/styles/color_theme.dart';
 import 'chats_screen.dart';
-import 'groups_screen.dart';
+import 'social_screen.dart';
 import 'home_screen.dart';
-import 'mic_screen.dart';
+import 'room_space_screens/space_screen.dart';
 import 'notification_screen.dart';
 
 
 List<Widget> screens =
 [
   const HomeScreen(),
-  const GroupsScreen(),
-  const MicScreen(),
+  const SocialScreen(),
+  const SpaceScreen(),
   const NotificationScreen(),
   const ChatsScreen(),
 ];
@@ -32,6 +32,8 @@ class LayoutScreen extends StatelessWidget {
         return  Scaffold(
           body: screens.elementAt(state.tabIndex),
           bottomNavigationBar: CurvedNavigationBar(
+
+            height: 55,
             color: const Color(0xff333739),
             backgroundColor: defaultGoldColor,
 

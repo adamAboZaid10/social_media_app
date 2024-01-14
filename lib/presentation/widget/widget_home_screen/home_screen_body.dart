@@ -19,28 +19,28 @@ class HomeScreenBody extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Column(
                 children: [
-                  const  SizedBox(height: 30,),
+                  SizedBox(height: MediaQuery.of(context).size.height*.05,),
                   const CustomEnterWithGroupListView(),
-                  const SizedBox(height: 40,),
+                  SizedBox(height: MediaQuery.of(context).size.height*.056,),
                   Row(
                     children:
                       [
                         SizedBox(
-                    width: 20,
-                    height: 20,
-                    child: Image.asset(AssetsData.defaultProfileImage),
+                          width: MediaQuery.of(context).size.width*.06,
+                           height: MediaQuery.of(context).size.height*.06,
+                          child: Image.asset(AssetsData.defaultProfileImage),
                   ),
                         SizedBox(
-                    width: 20,
-                    height: 20,
-                    child: Image.asset(AssetsData.defaultProfileImage),
+                          width: MediaQuery.of(context).size.width*.06,
+                          height: MediaQuery.of(context).size.height*.06,
+                          child: Image.asset(AssetsData.defaultProfileImage),
                   ),
                         SizedBox(
-                    width: 20,
-                    height: 20,
-                    child: Image.asset(AssetsData.defaultProfileImage),
+                          width: MediaQuery.of(context).size.width*.06,
+                          height: MediaQuery.of(context).size.height*.06,
+                           child: Image.asset(AssetsData.defaultProfileImage),
                   ),
-                        const SizedBox(width: 10,),
+                        SizedBox(height: MediaQuery.of(context).size.height*.027,),
                         const Expanded(
                       child:  Text(
         
@@ -50,7 +50,7 @@ class HomeScreenBody extends StatelessWidget {
                         style: TextStyle(color:Colors.white,fontSize: 17,fontWeight: FontWeight.w600),)),
                             ],
                           ),
-                  const SizedBox(height: 40,),
+                  SizedBox(height: MediaQuery.of(context).size.height*.06,),
                   const CustomRepostListView(),
                 ],
               ),

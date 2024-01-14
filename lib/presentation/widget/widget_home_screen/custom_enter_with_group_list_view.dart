@@ -7,12 +7,13 @@ class CustomEnterWithGroupListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height:50 ,
+      height:MediaQuery.of(context).size.height*.08 ,
       child: ListView.separated(
+        physics:const BouncingScrollPhysics(),
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context,index)=>const CustomEnterWithGroupItem(),
-        separatorBuilder:  (context,index)=>const SizedBox(width: 10,),
+        separatorBuilder:  (context,index)=> SizedBox(width:MediaQuery.of(context).size.width*.027,),
         itemCount: 12,
       ),
     );

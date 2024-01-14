@@ -24,9 +24,9 @@ var birthdayController = TextEditingController();
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:[
-              const SizedBox(height: 30,),
+              SizedBox(height: MediaQuery.of(context).size.height*.05,),
               const CustomSvgSocializeWidget(),
-              const SizedBox(height: 20,),
+              SizedBox(height: MediaQuery.of(context).size.height*.04,),
               const Text(
                 'What’s your birthday?',
                 style: TextStyle(
@@ -43,7 +43,7 @@ var birthdayController = TextEditingController();
                     fontWeight: FontWeight.w400
                 ),
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
               BlocBuilder<RegisterCubit,RegisterState>(
                 builder: (context,state)
                 {
@@ -68,7 +68,7 @@ var birthdayController = TextEditingController();
                   );
                 },
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
               CustomButtonRegisterWidget(
                   width: double.infinity,
                   onPressed: ()
@@ -82,7 +82,7 @@ var birthdayController = TextEditingController();
                   color: defaultGoldColor,
                   text: "Next"
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
 
             ]
 

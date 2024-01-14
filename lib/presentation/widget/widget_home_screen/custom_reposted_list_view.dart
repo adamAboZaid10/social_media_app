@@ -12,7 +12,7 @@ class CustomRepostListView extends StatelessWidget {
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context,index)=>const CustomRepostedListViewItem(),
-        separatorBuilder: (context,index)=>const SizedBox(height: 10,),
+        separatorBuilder: (context,index)=>  SizedBox(height: MediaQuery.of(context).size.height*.02,),
         itemCount: 10
     );
   }

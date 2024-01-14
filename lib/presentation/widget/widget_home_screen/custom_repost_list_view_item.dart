@@ -45,14 +45,17 @@ class CustomRepostedListViewItem extends StatelessWidget {
               children:
               [
                 const ChooseProfileImageOrDefaultImage(),
-                const SizedBox(width: 10,),
+                SizedBox(height: MediaQuery.of(context).size.height*.02,),
                 const CustomNameAndUserNameRepostedListItem(),
                  CustomButtonFollowListRepostItem(textFollow:  'following you',),
                 IconButton(onPressed: (){}, icon: const Icon(Icons.more_horiz))
               ],
             ),
-            const Padding(padding: EdgeInsets.symmetric(vertical: 15,horizontal: 8),
-              child: Text(
+             Padding(padding: EdgeInsets.symmetric(
+                 vertical:  MediaQuery.of(context).size.height*.03,
+                 horizontal: 8
+             ),
+              child: const Text(
                 'Welcome everyone ! Can you help me with a specific matter in Figma?',
                 style: TextStyle(color: Colors.white),
               ),

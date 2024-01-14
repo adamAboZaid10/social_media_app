@@ -15,15 +15,15 @@ class RegisterUserNameScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.height*.027),
       child:  SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:[
-              const SizedBox(height: 30,),
+              SizedBox(height: MediaQuery.of(context).size.height*.05,),
               const CustomSvgSocializeWidget(),
-              const SizedBox(height: 20,),
+              SizedBox(height: MediaQuery.of(context).size.height*.04,),
               const Text(
                 'Create a username',
                 style: TextStyle(
@@ -40,7 +40,7 @@ class RegisterUserNameScreenBody extends StatelessWidget {
                     fontWeight: FontWeight.w400
                 ),
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
                 DefaultFormField(
                     controller: usernameController,
                     type: TextInputType.text,
@@ -56,7 +56,7 @@ class RegisterUserNameScreenBody extends StatelessWidget {
                     obscure:false,
                     suffix: Icons.done,
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
               CustomButtonRegisterWidget(
                   width: double.infinity,
                   onPressed: ()
@@ -69,7 +69,7 @@ class RegisterUserNameScreenBody extends StatelessWidget {
                   color: defaultGoldColor,
                   text: "Next"
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
 
             ]
 

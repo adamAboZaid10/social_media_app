@@ -13,15 +13,15 @@ class RegisterMobileNumberScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*.029),
       child:  SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:[
-              const SizedBox(height: 30,),
+              SizedBox(height: MediaQuery.of(context).size.height*.05,),
               const CustomSvgSocializeWidget(),
-              const SizedBox(height: 20,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
               const Text(
                 'What’s your mobile number?',
                 style: TextStyle(
@@ -38,7 +38,7 @@ class RegisterMobileNumberScreenBody extends StatelessWidget {
                     fontWeight: FontWeight.w400
                 ),
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
               DefaultFormField(
                 controller: phoneController,
                 type: TextInputType.phone,
@@ -53,9 +53,9 @@ class RegisterMobileNumberScreenBody extends StatelessWidget {
                 hintText: 'phone number',
                 obscure:false,
               ),
-              const Padding(
-                padding:  EdgeInsets.symmetric(vertical: 8.0),
-                child: Text(
+               Padding(
+                padding:  EdgeInsets.symmetric(vertical:MediaQuery.of(context).size.height*.015 ),
+                child:const Text(
                   'You may receive SMS notifications from us for security and login purposes.',
                   style: TextStyle(
                       color: Colors.white,
@@ -76,7 +76,7 @@ class RegisterMobileNumberScreenBody extends StatelessWidget {
                   color: defaultGoldColor,
                   text: "Next"
               ),
-              const SizedBox(height: 16,),
+              SizedBox(height: MediaQuery.of(context).size.height*.03,),
 
             ]
 

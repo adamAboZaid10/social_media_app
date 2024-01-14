@@ -18,7 +18,7 @@ class LoginScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return  SafeArea(
       child:  Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*.03),
         child: SingleChildScrollView(
           physics:const  BouncingScrollPhysics(),
           child: Form(
@@ -27,9 +27,9 @@ class LoginScreenBody extends StatelessWidget {
 
               children:
               [
-                const SizedBox(height: 80,),
+                 SizedBox(height: MediaQuery.of(context).size.height*.1,),
                 const CustomSvgSocializeWidget(),
-                const  SizedBox(height: 50,),
+                  SizedBox(height: MediaQuery.of(context).size.height*.08,),
                 DefaultFormField(
                     controller: emailController,
                     type: TextInputType.emailAddress,
@@ -44,7 +44,7 @@ class LoginScreenBody extends StatelessWidget {
                     hintText: '  email or phone',
                     obscure: false,
                 ),
-                const  SizedBox(height: 20,),
+                  SizedBox(height: MediaQuery.of(context).size.height*.03,),
                 DefaultFormField(
                     controller: passwordController,
                     type: TextInputType.visiblePassword,
@@ -59,7 +59,7 @@ class LoginScreenBody extends StatelessWidget {
                     hintText: 'password',
                     obscure: false,
                 ),
-                const  SizedBox(height: 30,),
+                  SizedBox(height: MediaQuery.of(context).size.height*.05,),
                 CustomButtonRegisterWidget(
                     width: double.infinity,
                     onPressed: ()
@@ -80,7 +80,7 @@ class LoginScreenBody extends StatelessWidget {
                         'forget password?',
                       style: TextStyle(color: Colors.white),
                     )),
-                const  SizedBox(height: 40,),
+                  SizedBox(height: MediaQuery.of(context).size.height*.06,),
                 CustomButtonRegisterWidget(
                     width: double.infinity,
                     onPressed: ()
@@ -93,7 +93,7 @@ class LoginScreenBody extends StatelessWidget {
                     color: Colors.white,
                     text: "create new account"
                 ),
-                const  SizedBox(height: 20,),
+                  SizedBox(height: MediaQuery.of(context).size.height*.02,),
               ],
             ),
           ),

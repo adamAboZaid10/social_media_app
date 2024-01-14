@@ -18,6 +18,8 @@ class DefaultFormField extends StatelessWidget {
     this.onTap,
     this.suffixPressed,
     required this.obscure,
+    this.prefix,
+    this.prefixPressed,
   });
   TextEditingController controller;
   TextInputType type;
@@ -27,7 +29,9 @@ class DefaultFormField extends StatelessWidget {
   FormFieldValidator<String>? validator;
   String hintText;
   IconData? suffix;
+  IconData? prefix;
   GestureTapCallback? suffixPressed;
+  GestureTapCallback? prefixPressed;
   bool obscure = false;
   @override
   Widget build(BuildContext context) {
@@ -40,10 +44,20 @@ class DefaultFormField extends StatelessWidget {
           keyboardType: type,
           onFieldSubmitted: onSubmit,
           onTap: onTap,
+
           onChanged: onChange,
           validator: validator,
           obscureText: obscure,
           decoration: InputDecoration(
+            prefixIcon:  prefix != null
+                ? IconButton(
+              onPressed: prefixPressed,
+              icon: Icon(
+                prefix,
+                color: Theme.of(context).iconTheme.color,
+              ),
+            )
+                : null,
             hintText: hintText,
             hintStyle: Theme.of(context).textTheme.bodyText1!.copyWith(
                 fontSize: 14,fontWeight: FontWeight.normal,

@@ -6,7 +6,6 @@ import 'package:social_media_app/presentation/widget/widget_register_screen/show
 import '../../../core/styles/color_theme.dart';
 import '../../../core/utils/assets_data.dart';
 import '../../controller/get_image_bloc/get_image_bloc.dart';
-import '../../screens/home_screen.dart';
 import '../widget_components/custom_botton_register.dart';
 
 class DoneImageScreenBody extends StatelessWidget {
@@ -16,7 +15,7 @@ class DoneImageScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.height*.02),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:
@@ -29,7 +28,7 @@ class DoneImageScreenBody extends StatelessWidget {
                   .textTheme
                   .bodyText1!,
             ),
-            const SizedBox(height: 16,),
+            SizedBox(height: MediaQuery.of(context).size.height*.03,),
             Text(
               'Add a profile picture so your friends know it’s you. Everyone will be able to see your picture.',
               style: Theme
@@ -42,7 +41,7 @@ class DoneImageScreenBody extends StatelessWidget {
 
               ),
             ),
-            const SizedBox(height: 32,),
+            SizedBox(height: MediaQuery.of(context).size.height*.05,),
 
             BlocBuilder<GetImageBloc, GetImageState>(
                 builder: (context, state) {
@@ -85,7 +84,7 @@ class DoneImageScreenBody extends StatelessWidget {
               color: defaultGoldColor,
               text: 'Done',
             ),
-            const SizedBox(height: 10,),
+            SizedBox(height: MediaQuery.of(context).size.height*.015,),
             CustomButtonRegisterWidget(
               width: double.infinity,
               onPressed: () {
@@ -98,7 +97,7 @@ class DoneImageScreenBody extends StatelessWidget {
               color: Colors.white,
               text: 'Change Image',
             ),
-            const SizedBox(height: 16,),
+            SizedBox(height: MediaQuery.of(context).size.height*.03,),
           ],
         ),
       ),
