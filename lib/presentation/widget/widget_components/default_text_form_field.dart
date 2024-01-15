@@ -20,6 +20,7 @@ class DefaultFormField extends StatelessWidget {
     required this.obscure,
     this.prefix,
     this.prefixPressed,
+    this.maxLine
   });
   TextEditingController controller;
   TextInputType type;
@@ -29,6 +30,7 @@ class DefaultFormField extends StatelessWidget {
   FormFieldValidator<String>? validator;
   String hintText;
   IconData? suffix;
+  int? maxLine;
   IconData? prefix;
   GestureTapCallback? suffixPressed;
   GestureTapCallback? prefixPressed;
@@ -40,6 +42,7 @@ class DefaultFormField extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: TextFormField(
+          maxLines:maxLine ,
           controller: controller,
           keyboardType: type,
           onFieldSubmitted: onSubmit,

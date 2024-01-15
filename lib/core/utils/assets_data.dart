@@ -4,4 +4,5 @@ class AssetsData{
   static const defaultProfileImage= 'assets/images/defualt_profile_image.png';
   static const defaultImage= 'assets/images/defualt_image.png';
   static const defaultThirdAnimation= 'assets/images/third_animation.json';
+  static const defaultCoverProfileImage= 'assets/images/cover_profile.png';
 }

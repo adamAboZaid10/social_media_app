@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media_app/presentation/controller/bottom_nav_bar_bloc/bottom_nav_bar_bloc.dart';
 
 import '../../core/styles/color_theme.dart';
-import 'chats_screen.dart';
+import 'chat_screens/chats_screen.dart';
 import 'social_screen.dart';
 import 'home_screen.dart';
 import 'room_space_screens/space_screen.dart';

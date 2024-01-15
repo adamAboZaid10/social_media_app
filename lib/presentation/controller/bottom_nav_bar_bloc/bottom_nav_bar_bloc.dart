@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-import 'package:social_media_app/presentation/screens/chats_screen.dart';
+import 'package:social_media_app/presentation/screens/chat_screens/chats_screen.dart';
 import 'package:social_media_app/presentation/screens/social_screen.dart';
 import 'package:social_media_app/presentation/screens/home_screen.dart';
 import 'package:social_media_app/presentation/screens/room_space_screens/space_screen.dart';

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/presentation/widget/profile_screen_body.dart';
+
+import '../../widget/widget_profile_screen/profile_screen_body.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Profile'),
+        centerTitle: false,
+        title: Text('Profile',style: Theme.of(context).textTheme.bodyText1,),
       ),
       body: const ProfileScreenBody(),
     );

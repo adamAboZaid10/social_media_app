@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_app/presentation/screens/login_screen.dart';
-import 'package:social_media_app/presentation/screens/profile_screen.dart';
+import 'package:social_media_app/presentation/screens/profile_screen/all_followers_screen.dart';
+import 'package:social_media_app/presentation/screens/profile_screen/profile_screen.dart';
 import 'package:social_media_app/presentation/screens/register_screens/register_screen.dart';
+import 'package:social_media_app/presentation/screens/room_space_screens/space_screen.dart';
 import '../../../core/styles/color_theme.dart';
 import '../choose_profile_image.dart';
 import 'custom_feature_drawer_item.dart';
@@ -26,16 +28,16 @@ class CustomDrawerHomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Column(
+                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       ChooseProfileImageOrDefaultImage(),
-                      Text(
-                        'donia omar',
+                      const Text(
+                        'Adam mohamed',
                         style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18,color: Colors.white),
                       ),
-                      Text(
-                        '@doniaomar',
+                      const Text(
+                        '@adam',
                         style: TextStyle(fontWeight: FontWeight.w400,fontSize: 12,color: Colors.grey),
                       ),
                     ],
@@ -44,10 +46,19 @@ class CustomDrawerHomeScreen extends StatelessWidget {
                 ],
               ),
                SizedBox(height: MediaQuery.of(context).size.height*.05),
-              const CustomFollowerAndConnectsDrawer(),
+               CustomFollowerAndConnectsDrawer(
+                 followerTap: () 
+                 {
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context)=>const AllFollowersScreen())
+                   );
+                 }, 
+                 contactsTap: () {  },),
                SizedBox( height: MediaQuery.of(context).size.height*.05,),
               CustomFeaturesDrawerItem(
                 color: Colors.white,
+                  iconColor: Colors.white,
                   onTap: ()
                   {
                     Navigator.push(
@@ -59,18 +70,27 @@ class CustomDrawerHomeScreen extends StatelessWidget {
                   iconData: Icons.account_circle_outlined),
               SizedBox( height: MediaQuery.of(context).size.height*.05,),
               CustomFeaturesDrawerItem(
+                  iconColor: Colors.white,
                 color: Colors.white,
-                  onTap: (){},
+                  onTap: ()
+                  {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context)=>const SpaceScreen())
+                    );
+                  },
                   text: 'Spaces',
                   iconData: Icons.mic),
               SizedBox( height: MediaQuery.of(context).size.height*.05,),
               CustomFeaturesDrawerItem(
+                  iconColor: Colors.white,
                 color: Colors.white,
                   onTap: (){},
                   text: 'Settings',
                   iconData: Icons.settings),
               SizedBox( height: MediaQuery.of(context).size.height*.05,),
               CustomFeaturesDrawerItem(
+                  iconColor: Colors.white,
                 color: Colors.white,
                   onTap: ()
                   {
@@ -83,6 +103,7 @@ class CustomDrawerHomeScreen extends StatelessWidget {
                   iconData: Icons.logout),
               SizedBox( height: MediaQuery.of(context).size.height*.05,),
               CustomFeaturesDrawerItem(
+                  iconColor: Colors.white,
                 onTap: ()
                 {
                   Navigator.push(

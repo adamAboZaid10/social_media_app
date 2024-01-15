@@ -44,7 +44,7 @@ class CustomRepostedListViewItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children:
               [
-                const ChooseProfileImageOrDefaultImage(),
+                 ChooseProfileImageOrDefaultImage(),
                 SizedBox(height: MediaQuery.of(context).size.height*.02,),
                 const CustomNameAndUserNameRepostedListItem(),
                  CustomButtonFollowListRepostItem(textFollow:  'following you',),

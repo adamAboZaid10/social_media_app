@@ -6,8 +6,9 @@ import '../../core/utils/assets_data.dart';
 import '../controller/get_image_bloc/get_image_bloc.dart';
 
 class ChooseProfileImageOrDefaultImage extends StatelessWidget {
-  const ChooseProfileImageOrDefaultImage({super.key});
-
+   ChooseProfileImageOrDefaultImage({super.key,this.width,this.height});
+double? width = 50;
+double? height = 50;
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<GetImageBloc,GetImageState>(
@@ -18,14 +19,15 @@ class ChooseProfileImageOrDefaultImage extends StatelessWidget {
             return Center(
               child: Container(
                 clipBehavior: Clip.antiAliasWithSaveLayer,
-                width: 50,
-                height: 50,
+                width: width,
+                height: height,
                 decoration:const  BoxDecoration(
                   shape: BoxShape.circle,
 
                 ),
                 child: Image.file(
                   state.selectedImage,
+                  fit: BoxFit.cover,
                 ),
               ),
             );
@@ -36,6 +38,8 @@ class ChooseProfileImageOrDefaultImage extends StatelessWidget {
                   height: 30,
                   child: Image.asset(
                     AssetsData.defaultProfileImage,
+
+                    fit: BoxFit.cover,
                   ),
                 ));
           }

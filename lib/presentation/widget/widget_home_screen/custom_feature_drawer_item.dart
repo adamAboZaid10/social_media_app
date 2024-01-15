@@ -8,21 +8,24 @@ class CustomFeaturesDrawerItem extends StatelessWidget {
     required this.text,
     required this.iconData,
     required this.color,
+    required this.iconColor,
   });
   IconData iconData;
   String text;
   Color color;
+  Color iconColor;
   GestureTapCallback onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children:
         [
-          Icon(iconData),
+          Icon(iconData,color: iconColor,),
           const SizedBox(width: 10,),
-          Text(text,style:  TextStyle(color: color,fontSize: 17,fontWeight: FontWeight.w600),)
+          Expanded(child: Text(text,style:  TextStyle(color: color,fontSize: 17,fontWeight: FontWeight.w600),))
         ],
       ),
     );

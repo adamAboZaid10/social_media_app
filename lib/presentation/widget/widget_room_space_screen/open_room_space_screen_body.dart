@@ -14,51 +14,64 @@ class OpenRoomSpaceScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Padding(
       padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*.03),
-      child: SingleChildScrollView(
-        child: Column(
-          children:
-          [
-            Center(
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width*.5,
-                height: MediaQuery.of(context).size.height*.3,
-                  child: Lottie.asset(AssetsData.defaultThirdAnimation)),
-            ),
-            Row(
+      child: Stack(
+        alignment: Alignment.bottomCenter,
+        children: [
+          SingleChildScrollView(
+            child: Column(
               children:
               [
-                Expanded(
-                  child: Text(
-                    'Software engineering buddies',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.bodyText1!.copyWith(color: defaultGoldColor,fontSize: 17),
-                  ),
+                Center(
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width*.5,
+                    height: MediaQuery.of(context).size.height*.3,
+                      child: Lottie.asset(AssetsData.defaultThirdAnimation)),
                 ),
-                OutlinedButton(
-                    onPressed: ()
-                    {
-                      Navigator.pop(context);
-                    },
-                    child: Text('Leaving',style: Theme.of(context).textTheme.bodyText1!.copyWith(color: Colors.red,fontSize: 17),)
+                Row(
+                  children:
+                  [
+                    Expanded(
+                      child: Text(
+                        'Software engineering buddies',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).textTheme.bodyText1!.copyWith(color: defaultGoldColor,fontSize: 17),
+                      ),
+                    ),
+                    OutlinedButton(
+                        onPressed: ()
+                        {
+                          Navigator.pop(context);
+                        },
+                        child: Text('Leaving',style: Theme.of(context).textTheme.bodyText1!.copyWith(color: Colors.red,fontSize: 17),)
+                    ),
+
+                  ],
                 ),
+                const CustomGridViewOpenRoomSpace(),
+
 
               ],
             ),
-            const CustomGridViewOpenRoomSpace(),
-            CustomButtonRegisterWidget(
+          ),
+          Container(
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            decoration: BoxDecoration(
+              borderRadius:BorderRadius.circular(20),
+            ),
+            child: CustomButtonRegisterWidget(
+              width: MediaQuery.of(context).size.width*.5,
                 onPressed: ()
                 {
                   Navigator.push(
-                      context, 
-                    MaterialPageRoute(builder: (context)=>const StartListeningScreen())
+                      context,
+                      MaterialPageRoute(builder: (context)=>const StartListeningScreen())
                   );
                 },
                 color: defaultGoldColor,
-                text: 'Start listening')
-
-          ],
-        ),
+                text: 'Start listening'),
+          )
+        ],
       ),
     );
   }
