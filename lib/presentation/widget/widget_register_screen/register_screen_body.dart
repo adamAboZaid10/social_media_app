@@ -23,21 +23,13 @@ class RegisterScreenBody extends StatelessWidget {
              SizedBox(height: MediaQuery.of(context).size.height*.05,),
             const CustomSvgSocializeWidget(),
              SizedBox(height: MediaQuery.of(context).size.height*.04,),
-            const Text(
+             Text(
                 'what is your name?',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.w600
-              ),
+              style: Theme.of(context).textTheme.bodyText1,
             ),
-            const Text(
+             Text(
                 'Add your name so friends can find you. ',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 15,
-                fontWeight: FontWeight.w400
-              ),
+              style: Theme.of(context).textTheme.bodyText1!.copyWith(fontSize: 15,fontWeight: FontWeight.w400),
             ),
              SizedBox(height: MediaQuery.of(context).size.height*.03,),
             DefaultFormField(

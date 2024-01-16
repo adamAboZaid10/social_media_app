@@ -22,21 +22,13 @@ var confirmEmailController = TextEditingController();
               SizedBox(height: MediaQuery.of(context).size.height*.05,),
               const CustomSvgSocializeWidget(),
               SizedBox(height: MediaQuery.of(context).size.height*.03,),
-              const Text(
+               Text(
                 'Enter the confirmation code',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600
-                ),
+                style: Theme.of(context).textTheme.bodyText1,
               ),
-              const Text(
+               Text(
                 'To confirm your account, enter the 6-digit code we sent to ....................@gmail.com',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400
-                ),
+                style: Theme.of(context).textTheme.bodyText1!.copyWith(fontSize: 15,fontWeight: FontWeight.w400),
               ),
               SizedBox(height: MediaQuery.of(context).size.height*.03,),
               DefaultFormField(

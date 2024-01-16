@@ -15,7 +15,7 @@ class CustomRepostedListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height*.79,
+      height: MediaQuery.of(context).size.height*.84,
       decoration:  const BoxDecoration(
           borderRadius: BorderRadius.only(
               topLeft:Radius.circular(15),
@@ -44,7 +44,10 @@ class CustomRepostedListViewItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children:
               [
-                 ChooseProfileImageOrDefaultImage(),
+                 ChooseProfileImageOrDefaultImage(
+                   width:MediaQuery.of(context).size.width*.15,
+                   height:MediaQuery.of(context).size.height*.15 ,
+                 ),
                 SizedBox(height: MediaQuery.of(context).size.height*.02,),
                 const CustomNameAndUserNameRepostedListItem(),
                  CustomButtonFollowListRepostItem(textFollow:  'following you',),

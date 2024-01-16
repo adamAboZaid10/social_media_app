@@ -23,21 +23,13 @@ class RegisterConfirmPassScreenBody extends StatelessWidget {
               SizedBox(height: MediaQuery.of(context).size.height*.05,),
               const CustomSvgSocializeWidget(),
               SizedBox(height: MediaQuery.of(context).size.height*.03,),
-              const Text(
+               Text(
                 'Create a password',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600
-                ),
+                style: Theme.of(context).textTheme.bodyText1,
               ),
-              const Text(
+               Text(
                 'Create a password with at least 6 letters or numbers. It should be something other can’t guess.',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400
-                ),
+                style: Theme.of(context).textTheme.bodyText1!.copyWith(fontSize: 15,fontWeight: FontWeight.w400),
               ),
               SizedBox(height: MediaQuery.of(context).size.height*.03,),
               BlocBuilder<RegisterCubit,RegisterState>(
@@ -45,6 +37,7 @@ class RegisterConfirmPassScreenBody extends StatelessWidget {
                 {
                   var cubit = RegisterCubit.get(context);
                   return DefaultFormField(
+                    maxLine: 1,
                     controller: passController,
                     type: TextInputType.visiblePassword,
                     validator: (value)

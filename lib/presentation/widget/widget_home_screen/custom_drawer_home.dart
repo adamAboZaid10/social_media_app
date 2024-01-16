@@ -4,6 +4,7 @@ import 'package:social_media_app/presentation/screens/profile_screen/all_followe
 import 'package:social_media_app/presentation/screens/profile_screen/profile_screen.dart';
 import 'package:social_media_app/presentation/screens/register_screens/register_screen.dart';
 import 'package:social_media_app/presentation/screens/room_space_screens/space_screen.dart';
+import 'package:social_media_app/presentation/screens/settings_screens/settings_screen.dart';
 import '../../../core/styles/color_theme.dart';
 import '../choose_profile_image.dart';
 import 'custom_feature_drawer_item.dart';
@@ -31,7 +32,10 @@ class CustomDrawerHomeScreen extends StatelessWidget {
                    Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      ChooseProfileImageOrDefaultImage(),
+                      ChooseProfileImageOrDefaultImage(
+                        width:MediaQuery.of(context).size.width*.12,
+                        height:MediaQuery.of(context).size.height*.12 ,
+                      ),
                       const Text(
                         'Adam mohamed',
                         style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18,color: Colors.white),
@@ -85,7 +89,13 @@ class CustomDrawerHomeScreen extends StatelessWidget {
               CustomFeaturesDrawerItem(
                   iconColor: Colors.white,
                 color: Colors.white,
-                  onTap: (){},
+                  onTap: ()
+                  {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context)=>const SettingsScreen())
+                    );
+                  },
                   text: 'Settings',
                   iconData: Icons.settings),
               SizedBox( height: MediaQuery.of(context).size.height*.05,),

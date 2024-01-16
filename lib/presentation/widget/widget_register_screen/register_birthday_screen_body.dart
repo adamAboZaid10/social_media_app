@@ -27,21 +27,13 @@ var birthdayController = TextEditingController();
               SizedBox(height: MediaQuery.of(context).size.height*.05,),
               const CustomSvgSocializeWidget(),
               SizedBox(height: MediaQuery.of(context).size.height*.04,),
-              const Text(
+               Text(
                 'What’s your birthday?',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600
-                ),
+                style: Theme.of(context).textTheme.bodyText1,
               ),
-              const Text(
+               Text(
                 'Use Your own birthday, even if this account is for a business, a pet or something else. No one will see this unless you choose to share it. why do i need to provide my birthday?',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400
-                ),
+                style: Theme.of(context).textTheme.bodyText1!.copyWith(fontSize: 15,fontWeight: FontWeight.w400),
               ),
               SizedBox(height: MediaQuery.of(context).size.height*.03,),
               BlocBuilder<RegisterCubit,RegisterState>(

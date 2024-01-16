@@ -24,21 +24,13 @@ class RegisterUserNameScreenBody extends StatelessWidget {
               SizedBox(height: MediaQuery.of(context).size.height*.05,),
               const CustomSvgSocializeWidget(),
               SizedBox(height: MediaQuery.of(context).size.height*.04,),
-              const Text(
+               Text(
                 'Create a username',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600
-                ),
+                style: Theme.of(context).textTheme.bodyText1,
               ),
-              const Text(
+               Text(
                 'Add a username or use our suggestion. You can change this at any time.',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400
-                ),
+                style: Theme.of(context).textTheme.bodyText1!.copyWith(fontSize: 15,fontWeight: FontWeight.w400),
               ),
               SizedBox(height: MediaQuery.of(context).size.height*.03,),
                 DefaultFormField(

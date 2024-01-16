@@ -51,19 +51,15 @@ class ShowDialogImage extends StatelessWidget {
                   CustomButtonRegisterWidget(
                       onPressed: () {
                        context.read<GetImageBloc>().add(GetImageFromGalleryEvent());
-                       Navigator.pushReplacement(
-                           context,
-                           MaterialPageRoute(builder: (context)=>const DoneImageScreen()));
+                       Navigator.pop(context);
                       },
                       color: Colors.white,
                       text: 'Choose From Camera Roll'),
                   CustomButtonRegisterWidget(
                       onPressed: () {
                         context.read<GetImageBloc>().add(GetImageFromCameraEvent());
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(builder: (context)=>const DoneImageScreen()));
-                      },
+                        Navigator.pop(context);
+                          },
                       color: Colors.white,
                       text: 'Take photo'),
                 ],

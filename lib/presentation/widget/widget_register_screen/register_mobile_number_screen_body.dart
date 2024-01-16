@@ -22,21 +22,13 @@ class RegisterMobileNumberScreenBody extends StatelessWidget {
               SizedBox(height: MediaQuery.of(context).size.height*.05,),
               const CustomSvgSocializeWidget(),
               SizedBox(height: MediaQuery.of(context).size.height*.03,),
-              const Text(
+               Text(
                 'What’s your mobile number?',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600
-                ),
+                style: Theme.of(context).textTheme.bodyText1,
               ),
-              const Text(
+               Text(
                 'Enter the mobile number where you can be contacted. No one will see this on your profile.',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400
-                ),
+                style: Theme.of(context).textTheme.bodyText1!.copyWith(fontSize: 15,fontWeight: FontWeight.w400),
               ),
               SizedBox(height: MediaQuery.of(context).size.height*.03,),
               DefaultFormField(
@@ -55,13 +47,9 @@ class RegisterMobileNumberScreenBody extends StatelessWidget {
               ),
                Padding(
                 padding:  EdgeInsets.symmetric(vertical:MediaQuery.of(context).size.height*.015 ),
-                child:const Text(
+                child: Text(
                   'You may receive SMS notifications from us for security and login purposes.',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w400
-                  ),
+                  style: Theme.of(context).textTheme.bodyText1!.copyWith(fontSize: 15,fontWeight: FontWeight.w400),
                 ),
               ),
               CustomButtonRegisterWidget(

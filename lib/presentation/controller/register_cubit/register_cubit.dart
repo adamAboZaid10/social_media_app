@@ -9,6 +9,7 @@ class RegisterCubit extends Cubit<RegisterState> {
   static RegisterCubit get(context) => BlocProvider.of(context);
 
   bool obscureText = true;
+
   IconData suffix = Icons.visibility_outlined;
 
   DateTime dateTime = DateTime(2024,1,1);
